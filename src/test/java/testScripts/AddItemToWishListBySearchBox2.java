@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import javax.swing.text.Utilities;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.EncryptedDocumentException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,10 +18,11 @@ import pom.MontoCarlo_AccountPage;
 import pom.MontoCarlo_ProductPage;
 
 public class AddItemToWishListBySearchBox2  extends BaseClass{
-	
+	static Logger logger= LogManager.getLogger(AddElementHandlePopUp.class);
 	@Test
 	public void testCase2() throws EncryptedDocumentException, IOException, InterruptedException {
 	MonteCarlo_LoginPage login = new MonteCarlo_LoginPage(driver);
+	
 	login.loginButton();
 	MonteCarlo_SigninPage signin = new MonteCarlo_SigninPage(driver);
 	

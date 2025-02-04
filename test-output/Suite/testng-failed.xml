@@ -10,20 +10,6 @@
           <include name="openApp"/>
         </methods>
       </class> <!-- testScripts.AddItemToWishListBySearchBox2 -->
-      <class name="testScripts.SelectItemAndVerifyPinCode">
-        <methods>
-          <include name="closeApp"/>
-          <include name="openApp"/>
-          <include name="testCase3"/>
-        </methods>
-      </class> <!-- testScripts.SelectItemAndVerifyPinCode -->
-      <class name="testScripts.TestCase10">
-        <methods>
-          <include name="closeApp"/>
-          <include name="openApp"/>
-          <include name="testCase10"/>
-        </methods>
-      </class> <!-- testScripts.TestCase10 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

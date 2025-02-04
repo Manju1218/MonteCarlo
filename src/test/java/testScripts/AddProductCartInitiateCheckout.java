@@ -18,6 +18,7 @@ public class AddProductCartInitiateCheckout extends BaseClass{
 	public void testCase4() throws EncryptedDocumentException, IOException {
 		
 		MonteCarlo_LoginPage loginpage = new MonteCarlo_LoginPage(driver);
+	
 		loginpage.loginButton();
 		
 		MonteCarlo_SigninPage signin= new MonteCarlo_SigninPage(driver);
