@@ -40,6 +40,34 @@ public class MontoCarlo_ProductPage {
 	@FindBy(xpath="//button[@class='flits-button flits-tingle-btn flits-tingle-primary-btn']")
 	private WebElement email;
 	
+	@FindBy(id = "AddToCart")
+	private WebElement addCart;
+	
+	@FindBy(xpath = "//button[contains(text(),'Add order note')]")
+	private WebElement orderNote;
+	
+	@FindBy(xpath = "//button[text()='Save']")
+	private WebElement saveNoteButton;
+ 
+	@FindBy(xpath = "//button[@data-action=\"close\"]")
+	private WebElement closeCartDrawerButton;
+	
+	@FindBy(xpath = "//span[@class='ft__']")
+	private WebElement prodDesc;
+	
+	@FindBy(xpath = "//p[contains(text(),'Monte Carlo Fashions Limited Unit-4, C-12, Phase-V, Focal Point, Ludhiana-141010, Punjab, India')]")
+	private WebElement manufacturerAddress;
+	
+	@FindBy(linkText="Our Stores")
+	private WebElement clickStores;
+	
+	@FindBy(xpath="(//a[@data-tippy-content='Add to Wishlist'])[1]")
+	private WebElement addToWishlist;
+	@FindBy(xpath="//span[contains(text(),'Wishlist')]")
+	private WebElement goToWishlist;
+	
+
+ 
 	public MontoCarlo_ProductPage(WebDriver driver) {
 		PageFactory.initElements(driver,this);
 	}
@@ -79,5 +107,41 @@ public class MontoCarlo_ProductPage {
 	}
 	public String emailHandling() {
 		return email.getText();
+	}
+	public void addCartItem() {
+		addCart.click();
+	}
+	public void orderNote(String note) {
+		orderNote.sendKeys(note);
+	}
+	public void saveNote() {
+		saveNoteButton.click();
+	}
+	public void closeCart() {
+		closeCartDrawerButton.click();
+	}
+	public void proDesc() {
+		prodDesc.click();
+	}
+	public void manueFactureDetails() {
+		manufacturerAddress.click();
+	}
+	
+	
+	public WebElement getClickStores() {
+		return clickStores;
+	}
+
+	public void clickStores() {
+		clickStores.click();
+	}
+	public void wish() {
+		wishlistAdd.click();
+	}
+	public void gotoWish() {
+		goToWishlist.click();
+	}
+	public void addwish() {
+		addToWishlist.click();
 	}
 	}

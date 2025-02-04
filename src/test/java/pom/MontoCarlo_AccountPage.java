@@ -37,6 +37,18 @@ public class MontoCarlo_AccountPage {
 	@FindBy(xpath="(//a[text()='WOMEN'])[1]")
 	private WebElement women;
 	
+	@FindBy(xpath="//a[@href='/cart']")
+	private WebElement cartClick;
+	
+	@FindBy(xpath = "//img[@class='header__logo-image2']")
+	private WebElement homeImg;
+	
+	@FindBy(xpath = "//a[contains(text(),'SHOP Blankets')] ")
+	private WebElement shopBlankets;
+	
+	@FindBy(xpath = "(//img[@class='product-item__primary-image'])[12]")
+	private WebElement selectImgBlanket;
+	
 	public MontoCarlo_AccountPage(WebDriver driver) 
 	{
 		PageFactory.initElements(driver,this);
@@ -71,6 +83,19 @@ public class MontoCarlo_AccountPage {
 	}
 	public void womenSection() {
 		women.click();
+	}
+	public void cartClick() {
+		cartClick.click();
+	}
+	
+	public void HomeClick() {
+		homeImg.click();
+	}
+	public void shopBlanket() {
+		shopBlankets.click();
+	}
+	public void imgBlank() {
+		selectImgBlanket.click();
 	}
 
 	

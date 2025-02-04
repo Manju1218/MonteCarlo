@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Suite]]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)(failed)">
+    <classes>
+      <class name="testScripts.SelectItemAndVerifyPinCode">
+        <methods>
+          <include name="closeApp"/>
+          <include name="openApp"/>
+          <include name="testCase3"/>
+        </methods>
+      </class> <!-- testScripts.SelectItemAndVerifyPinCode -->
+      <class name="testScripts.MonteCarloVerifyPincode">
+        <methods>
+          <include name="closeApp"/>
+          <include name="openApp"/>
+          <include name="testCase5"/>
+        </methods>
+      </class> <!-- testScripts.MonteCarloVerifyPincode -->
+      <class name="testScripts.AddNewAddress">
+        <methods>
+          <include name="closeApp"/>
+          <include name="openApp"/>
+          <include name="testCase6"/>
+        </methods>
+      </class> <!-- testScripts.AddNewAddress -->
+      <class name="testScripts.TestCase10">
+        <methods>
+          <include name="closeApp"/>
+          <include name="openApp"/>
+          <include name="testCase10"/>
+        </methods>
+      </class> <!-- testScripts.TestCase10 -->
+      <class name="testScripts.AddProductToWishList">
+        <methods>
+          <include name="closeApp"/>
+          <include name="openApp"/>
+          <include name="testCase1"/>
+        </methods>
+      </class> <!-- testScripts.AddProductToWishList -->
+      <class name="testScripts.AddItemToWishListBySearchBox2">
+        <methods>
+          <include name="testCase2"/>
+          <include name="closeApp"/>
+          <include name="openApp"/>
+        </methods>
+      </class> <!-- testScripts.AddItemToWishListBySearchBox2 -->
+    </classes>
+  </test> <!-- Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Suite]] -->

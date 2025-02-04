@@ -11,7 +11,7 @@ public class MonteCarlo_AcComforterPage {
 	@FindBy(xpath="//button[text()='Size']")
 	private WebElement size;
 	
-	@FindBy(css="//label[contains(text(),'Single ')]")
+	@FindBy(xpath="//label[@class=\"block-swatch__item\"]")
 	private WebElement selectingsize;
 	
 	@FindBy(xpath="//button[text()='Color']")
@@ -20,13 +20,13 @@ public class MonteCarlo_AcComforterPage {
 	@FindBy(css="label[class='color-swatch__item']")
 	private WebElement selectcolour;
 
-	@FindBy(xpath="//button[text()='Brand']")
+	@FindBy(xpath="//button[contains(text(),'Brand')]")
 	private WebElement brand;
 	
-	@FindBy(xpath="//label[text()='Monte Carlo (41)‎']")
+	@FindBy(xpath="//label[@for='filter.p.m.custom.brand-1']")
 	private WebElement selectbrand;
 	
-	@FindBy(xpath="//button[text()='Availability']']")
+	@FindBy(xpath="//button[text()='Availability']")
 	private WebElement availability;
 	
 	@FindBy(xpath="//label[text()='In stock (7)‎']")
@@ -45,7 +45,7 @@ public class MonteCarlo_AcComforterPage {
 	private WebElement sleeve;
 	@FindBy(xpath="//label[contains(text(),'Full Sleeve ')]")
 	private WebElement selectsleeve;
-	@FindBy(xpath="(//img[@class='product-item__secondary-image'])[3]")
+	@FindBy(xpath="(//a[@class=\"product-item__aspect-ratio aspect-ratio \"])[9]")
 	private WebElement thirdItem;
 	@FindBy(xpath="(//div[@class='custom-tems slick-slide slick-active'])[4]")
 	private WebElement stole;

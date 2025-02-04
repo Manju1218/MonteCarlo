@@ -4,18 +4,23 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Base64;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 
 import genericlibraries.BaseClass;
 import pom.MonteCarlo_AcComforterPage;
 import pom.MontoCarlo_AccountPage;
 import pom.MontoCarlo_ProductPage;
+//import org.apache.logging.log4j,.LogManager;
 
 public class AddElementHandlePopUp extends BaseClass {
-	
+	static Logger logger= LogManager.getLogger(AddElementHandlePopUp.class);
 	@Test
 	public void testCase8() throws FileNotFoundException, IOException {
+		logger.info("Open App");
 		MontoCarlo_AccountPage accpage= new MontoCarlo_AccountPage(driver);
 		
 		accpage.womenSection();

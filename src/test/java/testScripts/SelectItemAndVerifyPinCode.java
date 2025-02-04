@@ -24,7 +24,7 @@ public class SelectItemAndVerifyPinCode extends BaseClass{
 		signin.userName(datautilities.readingdataExcelFile("Sheet1", 1, 1));
 		
 		signin.passWord(datautilities.readingdataExcelFile("Sheet1", 1, 2));
-		
+		Thread.sleep(3000);
 		signin.loginButton();
 		
 		Assert.assertEquals(driver.getTitle(),datautilities.readingdataPropertyFile("AccountPapeTitle"));
@@ -37,20 +37,26 @@ public class SelectItemAndVerifyPinCode extends BaseClass{
 		MonteCarlo_AcComforterPage  specifiactions = new MonteCarlo_AcComforterPage(driver);
 		
 		specifiactions.clickSize();
+		specifiactions.chooseSize();
 		
-		specifiactions.chooseBrand();
 		
 		specifiactions.clickBrand();
+		Thread.sleep(3000);
+		specifiactions.chooseBrand();
+		
 		
 		specifiactions.sleeve();
 		
 		specifiactions.sleeveSelect();
+		Thread.sleep(3000);
 		
 		specifiactions.thirdItem();
 		
 		MontoCarlo_ProductPage product = new MontoCarlo_ProductPage(driver);
 		
 		product.enterPincode(datautilities.readingdataPropertyFile("pincode"));
+		
+		product.checkPin();
 		
 		
 		

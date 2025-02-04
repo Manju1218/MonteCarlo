@@ -32,11 +32,11 @@ public class AddProductToWishList extends BaseClass {
 	
 	signin.loginButton();
 	
-	/*@Nullable
+	@Nullable
 	String acctitle = driver.getTitle();
 
 	Assert.assertEquals(acctitle, datautilities.readingdataPropertyFile("AccountPapeTitle"));
-	*/
+	
 	MontoCarlo_AccountPage accountpage= new MontoCarlo_AccountPage(driver);
 	WebElement mo = accountpage.getHomeFurnishing();
 	Thread.sleep(1000);
@@ -51,16 +51,16 @@ public class AddProductToWishList extends BaseClass {
 	comforter.clickSize();
 	
 	comforter.chooseSize();
-
+	Thread.sleep(3000);
 	comforter.clickColour();
 	
+	Thread.sleep(4000);
 	comforter.chooseColour();
-	Thread.sleep(3000);
 
 	comforter.clickBrand();
-
+	Thread.sleep(3000);
 	comforter.chooseBrand();
-
+	Thread.sleep(3000);
 	comforter.clickAvailability();
 
 	comforter.chooseAvailability();
@@ -69,7 +69,7 @@ public class AddProductToWishList extends BaseClass {
 	
 	MontoCarlo_ProductPage product = new MontoCarlo_ProductPage(driver);
 	
-	product.addWishList();
+	product.wishlistAdd();
 	
 	product.wishList();
 	
@@ -78,7 +78,7 @@ public class AddProductToWishList extends BaseClass {
 	String currentWishTitle = driver.getTitle();
 	
 	Assert.assertEquals(currentWishTitle,datautilities.readingdataPropertyFile("wishlistTitle"));
-	
+	Thread.sleep(3000);
 	wishlist.addToCart();
 	
 	}

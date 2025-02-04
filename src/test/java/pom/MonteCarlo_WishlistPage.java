@@ -15,6 +15,9 @@ public class MonteCarlo_WishlistPage {
 	@FindBy(xpath="(//button[contains(text(),'Add to Cart')])[1]")
 	private WebElement mouseHower;
 	
+	@FindBy(xpath="//p[@class='flits-product-name flits-link flits-text-ellipsis']")
+	private WebElement bedSheetVerify;
+	
 	
 	public MonteCarlo_WishlistPage(WebDriver driver) {
 		PageFactory.initElements(driver,this);
@@ -28,6 +31,12 @@ public class MonteCarlo_WishlistPage {
 	public WebElement mouseHower() {
 		
 		return mouseHower;	
+	}
+	public String bedSheet() {
+		return bedSheetVerify.getText();
+	}
+	public WebElement webEleWailadd() {
+		return addtocart;
 	}
 	
 //	(//button[@class="flits-button flits-primary-btn flits-remove-product"])[1]

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts.AddElementHandlePopUp">
+      <class name="testScripts.MonteCarloVerifyPincode">
         <methods>
           <include name="closeApp"/>
           <include name="openApp"/>
-          <include name="testCase8"/>
+          <include name="testCase5"/>
         </methods>
-      </class> <!-- testScripts.AddElementHandlePopUp -->
+      </class> <!-- testScripts.MonteCarloVerifyPincode -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
