@@ -4,14 +4,14 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="testScripts.TestCase10"/>
-      <class name="testScripts.SelectItemAndVerifyPinCode"/>
       <class name="testScripts.AddProductToWishList"/>
-      <class name="testScripts.AddNewAddress"/>
-      <class name="testScripts.AddProductCartInitiateCheckout"/>
+      <class name="testScripts.SelectItemAndVerifyPinCode"/>
       <class name="testScripts.MontoCarlo_AddToCartOldNew9"/>
       <class name="testScripts.AddItemToWishListBySearchBox2"/>
+      <class name="testScripts.AddProductCartInitiateCheckout"/>
       <class name="testScripts.DeleteAddressFromAccount"/>
       <class name="testScripts.AddElementHandlePopUp"/>
+      <class name="testScripts.AddNewAddress"/>
       <class name="testScripts.MonteCarloVerifyPincode"/>
     </classes>
   </test> <!-- Test -->

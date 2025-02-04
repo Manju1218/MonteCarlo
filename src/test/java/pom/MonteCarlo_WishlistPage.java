@@ -25,6 +25,9 @@ public class MonteCarlo_WishlistPage {
 	public void addToCart() {
 		addtocart.click();
 	}
+	public WebElement waitCart() {
+		return addtocart;
+	}
 	public void clickCart() {
 		cart.click();
 	}

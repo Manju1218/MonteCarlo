@@ -31,4 +31,7 @@ public class MonteCarlo_SigninPage {
 	public void loginButton() {
 		loginbutton.click();
 	}
+	public WebElement waitButton() {
+		return loginbutton;
+	}
 }

@@ -75,6 +75,9 @@ public class MontoCarlo_AccountPage {
 	public void roundNeck() {
 		roundNeck.click();
 	}
+	public WebElement waitNeck() {
+		return roundNeck;
+	}
 	public void womenHooded() {
 		womenhooded.click();
 	}

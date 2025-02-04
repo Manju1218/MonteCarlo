@@ -2,6 +2,8 @@ package testScripts;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.EncryptedDocumentException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,30 +15,38 @@ import pom.MonteCarlo_SigninPage;
 import pom.MontoCarlo_AccountPage;
 
 public class DeleteAddressFromAccount extends BaseClass{
+	static Logger logger= LogManager.getLogger(DeleteAddressFromAccount.class);
 	@Test
 	public void testCase7() throws EncryptedDocumentException, IOException, InterruptedException {
 		MonteCarlo_LoginPage loginpage = new MonteCarlo_LoginPage(driver);
+		logger.info("click on signin");
 		loginpage.loginButton();
 		
 		MonteCarlo_SigninPage signin= new MonteCarlo_SigninPage(driver);
-		
-		
+		logger.info("Entering username");
 		signin.userName(datautilities.readingdataExcelFile("Sheet1", 1, 1));
-		
+		logger.info("Entering password");
+
 		signin.passWord(datautilities.readingdataExcelFile("Sheet1", 1, 2));
-		
+		logger.info("click on signinButton");
+
 		signin.loginButton();
-		
+		logger.info("Verifying account page");
+
 		Assert.assertEquals(driver.getTitle(),datautilities.readingdataPropertyFile("AccountPapeTitle"));
 		
 
 		MontoCarlo_AccountPage accpage= new MontoCarlo_AccountPage(driver);
-		
+		logger.info("click on address");
+
 		accpage.address();
 		
 		MonteCarlo_AddressPage address = new MonteCarlo_AddressPage(driver);
+		logger.info("click on delete");
+
 		address.deleteAdd();
-		
+		logger.info("handling alert popup");
+
 		utilities.alertacceptPopup(driver);
 		
 		

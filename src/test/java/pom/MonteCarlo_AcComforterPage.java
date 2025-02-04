@@ -79,14 +79,26 @@ public class MonteCarlo_AcComforterPage {
 	public void clickColour() {
 		colour.click();
 	}
+	public WebElement waitColour() {
+		return colour;
+	}
 	public void chooseColour() {
 		selectcolour.click();
+	}
+	public WebElement waitBrand() {
+		return brand;
 	}
 	public void clickBrand() {
 		brand.click();
 	}
 	public void chooseBrand() {
 		selectbrand.click();
+	}
+	public WebElement waitBrandNeck() {
+		return selectbrand;
+	}
+	public WebElement waitAvailability() {
+		return selectavailability;
 	}
 	public void clickAvailability() {
 		availability.click();
@@ -111,6 +123,9 @@ public class MonteCarlo_AcComforterPage {
 	}
 	public void thirdItem() {
 		thirdItem.click();
+	}
+	public WebElement waitItem() {
+		return thirdItem;
 	}
 	public void selectStole() {
 		stole.click();
